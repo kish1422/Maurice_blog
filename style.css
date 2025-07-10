@@ -1,0 +1,445 @@
+:root {
+    --bg-color: rgb(235, 235, 235); /* Light grey background */
+    --primary-color: #1858cf; /* A soft blue, similar to the highlight in the app */
+    --text-color-dark: #333;
+    --text-color-light: #666;
+    --shadow-light: #ffffff;
+    --shadow-dark: #a7a7a7;
+    --border-radius-soft: 20px;
+    --border-radius-round: 50%;
+    --neumorphism-inset: inset 5px 5px 10px var(--shadow-dark), inset -5px -5px 10px var(--shadow-light);
+    --neumorphism-outset: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light);
+    --neumorphism-button-active: inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light);
+    --neumorphism-button-hover: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light); /* Slightly larger hover outset */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color-dark);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top */
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: rgb(255, 0, 85);
+    border-radius: var(--border-radius-soft);
+    box-shadow: var(--neumorphism-outset);
+    padding: 30px;
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+    margin: 20px 0;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+.blog-header {
+    display: flex;
+    justify-content: center; /* Center the title */
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header-title {
+    font-size: 1.8em; /* Slightly larger title */
+    font-weight: 700;
+    color: rgb(255, 0, 64);
+    margin: 0;
+    padding: 10px 20px; /* Add padding for a button-like look */
+    border-radius: var(--border-radius-soft);
+    box-shadow: var(--neumorphism-outset); /* Outset for the header title */
+    background-color:rgb(255, 241, 241);
+}
+
+
+/* Navbar Styling */
+.main-navbar {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center;
+    gap: 15px; /* Space between nav items */
+    margin-bottom: 40px;
+    background-color: rgb(255, 241, 241);
+    border-radius: var(--border-radius-soft);
+    box-shadow: var(--neumorphism-inset); /* Inset shadow for the navbar container */
+    padding: 15px 20px;
+}
+
+.nav-item {
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow: var(--neumorphism-outset);
+    padding: 10px 20px;
+    text-decoration: none;
+    color: Blue;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    white-space: nowrap; /* Prevent items from breaking words */
+}
+
+.nav-item:hover {
+    box-shadow: var(--text-color-light); /* Enhanced hover effect */
+    color: var(--primary-color);
+}
+
+.nav-item.active {
+    background-color:blue;
+    color: white;
+    box-shadow: var(--neumorphism-outset);
+    cursor: default; /* No hover effect for active */
+}
+
+.nav-item.active:hover {
+    color: white; /* Keep text white on hover for active */
+    box-shadow: var(--neumorphism-inset); /* Keep inset shadow for active */
+}
+
+/* Profile / Summary Section */
+.profile-summary {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-circle {
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(145deg, #f0f0f0, #ffffff); /* Soft gradient similar to album art */
+    border-radius: var(--border-radius-round);
+    box-shadow: var(--neumorphism-inset);
+    margin: 0 auto 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* For the image */
+}
+
+.profile-circle img {
+    width: 120%;
+    height: 120%;
+    object-fit: cover;
+    border-radius: var(--border-radius-round);
+    align-items: bottom;
+}
+
+.profilename {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+    background-color: aqua;
+    box-shadow: #fff6f6;
+    box-sizing: border-box;
+    color: #fff6f6;
+    padding: auto;
+    border-radius: 10px;
+    border: #fffff5;
+}
+
+.profile-tagline {
+    font-size: 1.1em;
+    color: bisque;
+    margin-bottom: 30px;
+}
+
+.summary-text-box {
+    background-color: rgb(230, 255, 255);
+    border-radius: var(--border-radius-soft);
+    box-shadow: var(--neumorphism-inset); /* Inset shadow for content areas */
+    padding: 25px;
+    text-align: left;
+    line-height: 1.6;
+    color:rgb(52, 1, 73);
+}
+
+/* General Content Sections */
+.content-section {
+    margin-bottom: 40px;
+}
+
+.content-section h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: var(--text-color-dark);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* List Item Styling (Education, Experience, Projects) */
+.list-item-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.list-item {
+    background-color: var(--bg-color);
+    border-radius: 15px;
+    box-shadow: var(--neumorphism-inset);
+    padding: 20px 25px;
+    transition: all 0.2s ease;
+    cursor: pointer; /* Indicates it's clickable */
+    position: relative; /* For the button positioning */
+}
+
+.list-item:hover {
+    box-shadow: var(--primary-color); /* Inset on hover for a clicked effect */
+}
+
+.list-item.active-item { /* For highlighting current section or featured item (if using JS for interaction) */
+    background-color: var(--primary-color);
+    color: rgb(144, 255, 203);
+    box-shadow: var(--neumorphism-inset);
+}
+
+.list-item .item-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.list-item .item-subtitle {
+    font-size: 0.95em;
+    color: var(--text-color-light);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.list-item.active-item .item-subtitle {
+    color: rgba(255, 255, 255, 0.8); /* Lighter subtitle for active state */
+}
+
+.list-item .description {
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: var(--text-color-light);
+    margin-top: 15px;
+    overflow: hidden;
+    max-height: 0; /* Controlled by JS for animation */
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out; /* Smooth transition */
+    opacity: 0;
+}
+
+.list-item.active-item .description {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.list-item .description.show {
+    max-height: 500px; /* Adjust based on expected content height */
+    opacity: 1;
+}
+
+/* Read More Button */
+.read-more-btn {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--neumorphism-outset);
+    padding: 8px 15px;
+    font-size: 0.85em;
+    font-weight: 600;
+    color: var(--primary-color);
+    cursor: pointer;
+    margin-top: 15px; /* Space from description */
+    transition: all 0.2s ease;
+    display: block; /* Make it a block element to take full width if needed */
+    width: fit-content; /* Adjust width to content */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.read-more-btn:hover {
+    box-shadow: var(--neumorphism-button-active);
+    color: var(--text-color-dark);
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.skill-category-box {
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius-soft);
+    box-shadow: var(--neumorphism-inset); /* Inset for skill boxes */
+    padding: 25px;
+}
+
+.skill-category-box h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--primary-color); /* Highlight category titles */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.skill-category-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-category-box ul li {
+    font-size: 0.95em;
+    color: var(--text-color-light);
+    padding: 5px 0;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px; /* Space between skill items */
+}
+
+.skill-category-box ul li:before {
+    content: '•'; /* Simple bullet point */
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    top: 5px;
+    font-weight: bold;
+}
+
+/* Skill Bars */
+.skill-bar-container {
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    box-shadow: var(--neumorphism-inset); /* Inset for the bar container */
+    height: 10px;
+    margin-top: 5px;
+    overflow: hidden; /* Ensures bar stays within bounds */
+}
+
+.skill-bar {
+    height: 100%;
+    background-color: var(--primary-color); /* The filled part of the bar */
+    border-radius: 5px;
+    width: 0; /* Initial width, animated by JS */
+    transition: width 1s ease-out; /* Smooth fill animation */
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2); /* Subtle inner shadow for the bar */
+}
+
+
+/* Contact Socials */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    text-align: center;
+}
+
+.contact-item {
+    background-color: var(--bg-color);
+    border-radius: 15px;
+    box-shadow: var(--neumorphism-inset);
+    padding: 20px;
+    text-decoration: none;
+    color: var(--text-color-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s ease;
+}
+
+.contact-item:hover {
+    box-shadow: var(--shadow-light); /* Enhanced hover */
+    color: var(--primary-color);
+}
+
+.contact-item i {
+    font-size: 1.8em;
+    color: var(--primary-color);
+}
+
+.contact-item span {
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+/* Interests and Languages Lists */
+.interests-list, .languages-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.interests-list li, .languages-list li {
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: var(--neumorphism-inset);
+    padding: 10px 15px;
+    font-size: 0.9em;
+    color: var(--text-color-light);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.interests-list li:hover, .languages-list li:hover {
+    box-shadow: var(--neumorphism-button-active);
+    color: var(--primary-color);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .profile-name {
+        font-size: 1.6em;
+    }
+
+    .profile-circle {
+        width: 140px;
+        height: 140px;
+    }
+
+    .header-title {
+        font-size: 1.5em;
+    }
+
+    .main-navbar {
+        flex-direction: column; /* Stack nav items */
+        gap: 10px;
+    }
+
+    .nav-item {
+        width: 90%; /* Full width for stacked items */
+        text-align: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr; /* Stack skills on small screens */
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack contact items on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        border-radius: 10px;
+        margin: 10px 0;
+    }
+
+    .list-item, .skill-category-box, .contact-item, .interests-list li, .languages-list li {
+        border-radius: 10px;
+        padding: 0.5px;
+        font-size: medium;
+    }
+
+    .header-title {
+        font-size: 1.3em;
+    }
+}
