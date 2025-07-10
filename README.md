@@ -1,1 +1,8 @@
-# Maurice_blog
+"This professional profile showcases Maurice Wawira, a highly motivated and results-oriented IT professional with a robust foundation in full-stack web development, software engineering, and cybersecurity. Maurice has cultivated a strong practical command of key IT disciplines through dedicated self-study and extensive online resources, mirroring a formal degree program. Key highlights from the document include:
+
+Comprehensive Technical Expertise: Proficient in front-end development (HTML5, CSS3, JavaScript, React.js), back-end development (Node.js, PHP, RESTful APIs), programming languages (JavaScript, PHP, Node.js, Arduino), and version control (Git, GitHub).
+Database Mastery: Experienced with relational databases (MySQL), NoSQL databases (MongoDB), and real-time databases (Supabase), alongside strong skills in database design and management.
+Practical Project Experience: Successfully developed and deployed the ZEDAH Property Solutions web platform and actively contributed to the SafriGo ride-hailing application, demonstrating end-to-end application development capabilities.
+Diverse IT Skillset: Includes foundational knowledge in cybersecurity practices (authentication, data protection, threat mitigation), IT support, and system administration (hardware/software installation, network functionality, troubleshooting).
+Proven Media Management: Possesses significant experience as a Lead Media & Content Manager, spearheading digital media content, live streaming operations, and utilizing a suite of creative tools like Adobe Photoshop, Illustrator, After Effects, and Premiere Pro.
+Strong Soft Skills: Exhibits analytical, problem-solving, communication, time management, and adaptability skills, alongside high integrity and digital literacy (mastery of 13 essential computer packages)"
